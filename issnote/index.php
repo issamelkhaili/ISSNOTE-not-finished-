@@ -6,11 +6,11 @@
   <meta name="description" content="ISSNote - A simple and efficient notepad for taking and managing notes.">
   <meta name="keywords" content="notepad, notes, ISSNote, text editor, writing">
   <title>ISSNote - Your Personal Notepad</title>
-  <link rel="stylesheet" href="styles.css">  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+  <link rel="stylesheet" href="src/styles.css">  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <header>
-<?php include "header.html"?>
+<?php include "src/header.html"?>
 </header>
 <body>
-<?php include "body.html"?>
+<?php include "src/body.html"?>
 </body>
