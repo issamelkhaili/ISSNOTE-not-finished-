@@ -1,6 +1,12 @@
 <?php
 function create_note($filename)
 {
+    $i = 1;
+    while(file_exists($filename) && file_exists($filename.$i))
+	$i++;
+    if(file_exists($filename))
+    	$filename=$filename.$i;
+
     $temp = fopen($filename, 'w');
     if ($temp) {
         fclose($temp);
