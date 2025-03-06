@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>q
 <html>
 <head>
   <meta charset="UTF-8">
@@ -9,8 +9,10 @@
   <title>ISSNote - Your Personal Notepad</title>
 </head>
 <header>
-<?php include "home_header.html"?>
-</header>
+<h1>Welcom Back !</h1>
+<br>
+<h2>IssNote is the right place to store and save all ur thoughts </h2>
+<a href="notesbase/creatfile.php"><input type="button" id="creatfile" value="New Note"></a></header>
 <body>
 </body>
 </html>
