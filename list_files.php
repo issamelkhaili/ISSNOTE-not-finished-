@@ -10,7 +10,8 @@
             $filepath = "notesbase/Notes/" . $directory_contents;
             $sizze = filesize($filepath);
             $modified = filemtime($filepath);
-            echo "<li>"."$directory_contents"."     size : $sizze" . "     last_modified : " .date("Y/m/d",$modified)."</li>"."\n";
+            $ddirectory_contents = "<a href="notesbase/Notes/opennotes.php";
+            echo "<li>"."$ddirectory_contents"."     size : $sizze" . "     last_modified : " .date("Y/m/d",$modified)."</li>"."\n";
             echo "<br>";
         }
     }

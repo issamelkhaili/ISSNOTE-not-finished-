@@ -14,5 +14,6 @@
 <h2>IssNote is the right place to store and save all ur thoughts </h2>
 <a href="notesbase/creatfile.php"><input type="button" id="creatfile" value="New Note"></a></header>
 <body>
+    <?php include "list_files.php";?>
 </body>
 </html>
