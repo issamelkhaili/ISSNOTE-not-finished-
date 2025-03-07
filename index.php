@@ -9,7 +9,7 @@
   <title>ISSNote - Your Personal Notepad</title>
 </head>
 <header>
-<h1>Welcom Back !</h1>
+<h1>Welcome Back !</h1>
 <br>
 <h2>IssNote is the right place to store and save all ur thoughts </h2>
 <a href="notesbase/creatfile.php"><input type="button" id="creatfile" value="New Note"></a></header>

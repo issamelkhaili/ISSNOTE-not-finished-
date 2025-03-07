@@ -13,10 +13,10 @@
 <body>
   <header>
     <div class="header-content">
-      <h2 id="filename"><?php $filename="file.txt"; echo "You are editing ".$filename; ?></h2>
+      <h2 id="filename"><?php echo "You are editing ".$filename; ?></h2>
       <div class="header-buttons">
         <button class="btn save-btn" onclick="document.getElementById('save-form').submit()">💾 Save Changes</button>
-        <button class="btn delete-btn" onclick="window.location.href='deletefile.php'">🗑️ Remove File</button>
+        <button class="btn delete-btn" onclick="document.getElementById('delete-form').submit()">Delete Note</button>
       </div>
     </div>
   </header>
@@ -29,8 +29,19 @@
     <input type="hidden" id="submit" name="submit">
   </form>
 
-  <footer>
+    <form id="delete-form" action="deletefile.php" method="POST">
+      <input type="hidden" id="submit" name="submit">
+    </form>
+
+<footer>
     <p>ISSNote v1.0 - Created by issamelkhaili</p>
+    <input type="button" id="button" name="button" value="clickme">
+    <script>
+        document.getElementById('button').onclick = function() {
+          const content = editor.getValue();
+          console.log(content);
+        };
+    </script>
   </footer>
 </body>
 </html>

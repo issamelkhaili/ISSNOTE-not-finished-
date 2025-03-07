@@ -1,16 +1,17 @@
 <?php
+
 function create_note($filename)
 {
     $i = 1;
     while(file_exists($filename) && file_exists($filename.$i))
-	$i++;
+	    $i++;
     if(file_exists($filename))
     	$filename=$filename.$i;
 
     $temp = fopen($filename, 'w');
     if ($temp) {
         fclose($temp);
-        return true;
+        return basename($filename);
     }
     return false;
 }
@@ -54,7 +55,7 @@ function rename_note($old_filename, $new_filename)
     return false;
 }
 
-function get_note_modified_time($filename)
+function filename_modified_time($filename)
 {
     if (file_exists($filename)) {
         return filemtime($filename);
