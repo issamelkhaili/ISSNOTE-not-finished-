@@ -15,8 +15,15 @@
     <div class="header-content">
       <h2 id="filename"><?php echo "You are editing ".$filename; ?></h2>
       <div class="header-buttons">
-        <button class="btn save-btn" onclick="document.getElementById('save-form').submit()">💾 Save Changes</button>
-        <button class="btn delete-btn" onclick="document.getElementById('delete-form').submit()">Delete Note</button>
+        <form action="savedata.php" method="POST" style="display:inline;">
+          <input type="hidden" name="filename" value="<?php echo $filename; ?>">
+          <input type="hidden" name="content" value="<?php echo htmlspecialchars($content); ?>">
+          <button type="submit" name="submit" class="btn save-btn">💾 Save Changes</button>
+        </form>
+        <form action="../notesbase/deletefile.php" method="POST" style="display:inline;">
+          <input type="hidden" name="filename" value="<?php echo $filename; ?>">
+          <button type="submit" name="submit" class="btn delete-btn">Delete Note</button>
+        </form>
       </div>
     </div>
   </header>
@@ -25,15 +32,9 @@
     <?php include "codemirror.html"?>
   </main>
 
-  <form id="save-form" action="savedata.php" method="POST">
-    <input type="hidden" id="submit" name="submit">
-  </form>
+  <div data-filename="<?php echo $filename; ?>"></div>
 
-    <form id="delete-form" action="deletefile.php" method="POST">
-      <input type="hidden" id="submit" name="submit">
-    </form>
-
-<footer>
+  <footer>
     <p>ISSNote v1.0 - Created by issamelkhaili</p>
     <input type="button" id="button" name="button" value="clickme">
     <script>
@@ -44,9 +45,4 @@
     </script>
   </footer>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
-
->>>>>>> a8c936ca993e79e46d7a6b9de598af8cb19fda4a
