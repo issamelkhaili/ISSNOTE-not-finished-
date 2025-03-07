@@ -44,4 +44,9 @@
     </script>
   </footer>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> a8c936ca993e79e46d7a6b9de598af8cb19fda4a
