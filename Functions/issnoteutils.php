@@ -62,4 +62,13 @@ function filename_modified_time($filename)
     }
     return false;
 }
+
+function addtolog($reason,$event)
+{
+   if($reason == "newfile")
+   {
+        append_to_note("User Created $event","../logs/logs.txt");
+   }
+}
+
 ?>

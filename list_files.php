@@ -1,5 +1,5 @@
 <?php
-    echo "<h1> Your IssNotes</h1>";
+    echo "<label name=\"Mini titl\" id=\"customised_title\"><h2>Your IssNotes</h2></label>";
     $path = "notesbase/Notes";
     $toopen = opendir($path);
     echo "<ul>"."\n";
@@ -10,8 +10,8 @@
             $filepath = "notesbase/Notes/" . $directory_contents;
             $sizze = filesize($filepath);
             $modified = filemtime($filepath);
-            $ddirectory_contents = "<a href="notesbase/Notes/opennotes.php";
-            echo "<li>"."$ddirectory_contents"."     size : $sizze" . "     last_modified : " .date("Y/m/d",$modified)."</li>"."\n";
+            $ddirectory_contents = $directory_contents;
+            echo "<li>"."$ddirectory_contents    "."     size : $sizze" . "     last_modified : " . date("Y/m/d",$modified)."</li>"."\n";
             echo "<br>";
         }
     }

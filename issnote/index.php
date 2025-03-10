@@ -13,7 +13,7 @@
 <body>
   <header>
     <div class="header-content">
-      <h2 id="filename"><?php echo "You are editing ".$filename; ?></h2>
+      <h2 id="filename"><?php echo "<h2>$filename</h2>";?>
       <div class="header-buttons">
         <form action="savedata.php" method="POST" style="display:inline;">
           <input type="hidden" name="filename" value="<?php echo $filename; ?>">
@@ -32,7 +32,6 @@
     <?php include "codemirror.html"?>
   </main>
 
-  <div data-filename="<?php echo $filename; ?>"></div>
 
   <footer>
     <p>ISSNote v1.0 - Created by issamelkhaili</p>
