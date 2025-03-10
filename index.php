@@ -15,5 +15,7 @@
 <a href="notesbase/creatfile.php"><input type="button" id="creatfile" value="New Note"></a></header>
 <body>
     <?php include "list_files.php";?>
+    <br>
+    <h3><?php $quotes = file("quotes/quotes.txt"); $quotenum = rand(1,9); print ($quotes[$quotenum]); ?></h3>
 </body>
 </html>
