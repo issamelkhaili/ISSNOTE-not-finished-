@@ -12,6 +12,17 @@ if (empty($email) || empty($username) || empty($password) || empty($firstname) |
     echo "<h1>All Fields are required</h1>";
     exit;
 }
+$database = file("../database/database.txt");
+
+foreach ($database as $line) {
+    $data = explode("|", $line);
+
+    if (count($data) >= 3 && trim($data[0]) === $_POST['email']) {
+            echo "User Already Exists";
+            exit;
+    }
+}
+
 if(strchr($email,"|"))
 {
     echo "<h1>Forbidden character '|'</h1>";
